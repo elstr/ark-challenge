@@ -17,7 +17,6 @@ const Modal = forwardRef((props, ref) => {
     setData(objectTemp);
     setDisplay(true);
     console.log({ objectTemp });
-    /* objectTemp = object; */
   };
 
   const close = () => {
@@ -25,8 +24,8 @@ const Modal = forwardRef((props, ref) => {
   };
 
   if (display) {
-    const { userName, todayNumber, generalNumber } = data;
-    console.log({ userName });
+    const { userName, todayNumber, generalNumber, social } = data;
+    console.log({ social });
     return (
       <div className="modal-container">
         <div onClick={close} className="modal-back"></div>
@@ -35,7 +34,7 @@ const Modal = forwardRef((props, ref) => {
             <span className="primary">&#10006;</span>
           </button>
           <div className="info-container">
-            <h2>Facebook followers</h2>
+            <h2>{social} followers</h2>
             <img src="../images/icon-facebook.svg" alt="" />
             <span>username: {userName}</span>
             <span className="modal-number primary">1987</span>

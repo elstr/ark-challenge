@@ -13,6 +13,7 @@ const Dashboard = (props) => {
         generalNumber={1987}
         todayNumber={12}
         generalDesc="Followers"
+        social="facebook"
       ></GeneralCard>
       <GeneralCard
         OpenModal={props.OpenModal}
@@ -23,6 +24,7 @@ const Dashboard = (props) => {
         generalNumber={1044}
         todayNumber={99}
         generalDesc="Followers"
+        social="twitter"
       ></GeneralCard>
       <GeneralCard
         OpenModal={props.OpenModal}
@@ -33,6 +35,7 @@ const Dashboard = (props) => {
         generalNumber={11000}
         todayNumber={1099}
         generalDesc="Followers"
+        social="instagram"
       ></GeneralCard>
       <GeneralCard
         OpenModal={props.OpenModal}
@@ -43,6 +46,7 @@ const Dashboard = (props) => {
         generalNumber={8239}
         todayNumber={144}
         generalDesc="Subscribers"
+        social="youtube"
       ></GeneralCard>
     </div>
   );

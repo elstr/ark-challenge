@@ -1,0 +1,52 @@
+.modal-container {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 100; }
+
+.modal-box {
+  position: relative;
+  border-radius: 10px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  display: flex;
+  flex-direction: column; }
+  .modal-box button {
+    align-self: flex-end;
+    background-color: transparent;
+    text-decoration: none;
+    border: none;
+    position: relative;
+    left: -20px;
+    top: 18px; }
+
+.modal-back {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.4); }
+
+.modal-number {
+  font-weight: 700;
+  font-size: 2.5rem; }
+
+.chart-container {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px; }
+
+.recharts-legend-wrapper {
+  display: none; }
+
+.recharts-wrapper {
+  width: auto !important; }
+
+.recharts-surface {
+  width: 95% !important; }

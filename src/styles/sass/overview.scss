@@ -1,0 +1,51 @@
+@import "./variable.scss";
+
+.daily-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.daily-card {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  flex-basis: 25%;
+  padding: 20px;
+  margin: 15px;
+  max-width: 225px;
+  min-width: 200px;
+  flex-direction: column;
+  border-radius: 5px;
+  cursor: pointer;
+  .daily-row:first-child {
+    margin-bottom: 20px;
+  }
+}
+
+.daily-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.daily-desc {
+  font-size: 0.9rem;
+}
+
+.daily-number {
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.daily-perc {
+  font-size: 0.8rem;
+  align-self: flex-end;
+}
+
+/* 
+
+daily-perc */

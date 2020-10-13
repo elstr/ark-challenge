@@ -1,0 +1,265 @@
+@import "./variable.scss";
+
+//general styles
+
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+body {
+  background-attachment: fixed;
+}
+
+.app {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+header {
+  flex-basis: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 30px 0;
+  .toggle-container {
+    display: flex;
+    align-items: center;
+    .toggle-name {
+      padding-right: 15px;
+    }
+  }
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.7rem;
+  flex-basis: 82%;
+  padding: 20px 0;
+}
+
+h3 {
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+//borders styles
+
+.border {
+  border-top: 4px solid white;
+}
+
+.facebook {
+  border-color: $facebook;
+}
+
+.instagram {
+  border-image-slice: 1;
+  border-image-source: $instagram;
+}
+
+.twitter {
+  border-color: $twitter;
+}
+
+.youtube {
+  border-color: $youtube;
+}
+
+.dark-mode .general-card:hover,
+.dark-mode .daily-card:hover {
+  background-color: #333a56;
+}
+
+.light-mode .general-card:hover,
+.light-mode .daily-card:hover {
+  background-color: #e1e3f0;
+}
+
+//status colours class
+
+.status-green {
+  color: $lime-green !important;
+  position: relative;
+}
+
+.status-green::before {
+  content: "";
+  background-image: url(../../images/icon-up.svg);
+  width: 10px;
+  height: 10px;
+  display: block;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 19px;
+  left: 0px;
+}
+
+.daily-perc.status-green::before {
+  top: 5px;
+  left: -15px;
+}
+
+.status-red {
+  color: $bright-red !important;
+  position: relative;
+}
+
+.status-red::before {
+  content: "";
+  background-image: url(../../images/icon-down.svg);
+  width: 10px;
+  height: 10px;
+  display: block;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 19px;
+  left: 0px;
+}
+
+.daily-perc.status-red::before {
+  top: 5px;
+  left: -15px;
+}
+
+//variables colours class
+
+.black-bg {
+  opacity: 1;
+  transition: opacity 0.25s ease-in-out;
+  background: linear-gradient(180deg, #1f212e 25%, #1e202a 25%);
+  background-attachment: fixed;
+}
+
+.light-bg {
+  opacity: 1;
+  transition: opacity 0.25s ease-in-out;
+  background: linear-gradient(180deg, #f5f7ff 25%, #ffffff 25%);
+  background-attachment: fixed;
+}
+
+.dark-mode {
+  span.primary,
+  h1,
+  h2 {
+    transition: all 0.25s ease-in-out;
+    color: $dark-text;
+  }
+
+  span {
+    transition: all 0.25s ease-in-out;
+    color: $desaturated-blue-text;
+    font-weight: 700;
+  }
+
+  div.general-card,
+  div.daily-card {
+    transition: all 0.25s ease-in-out;
+    background-color: $dark-desaturated-blue-card;
+  }
+
+  div.modal-box {
+    background-color: $dark-top-bg;
+  }
+  div.chart-container {
+    background-color: $dark-simple-bg;
+  }
+}
+
+.light-mode {
+  span.primary,
+  h1,
+  h2 {
+    color: $light-text;
+    transition: all 0.25s ease-in-out;
+  }
+  span {
+    color: $grayish-blue-text;
+    transition: all 0.25s ease-in-out;
+    font-weight: 700;
+  }
+  div.general-card,
+  div.daily-card {
+    background-color: $light-grayish-blue-card;
+    transition: all 0.25s ease-in-out;
+  }
+  div.modal-box {
+    background-color: $light-top-bg;
+  }
+  div.chart-container {
+    background-color: $light-simple-bg;
+  }
+}
+
+// Styles switch toggle
+.toggle-name {
+  font-weight: 700;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 43px;
+  height: 23px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: $toggle-light;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 17px;
+  width: 17px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background: $toggle-dark;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(20px);
+  -ms-transform: translateX(20px);
+  transform: translateX(20px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
